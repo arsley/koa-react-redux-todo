@@ -30,9 +30,9 @@ class Todos extends Component {
 
     if (newTodo) {
       const todo = { description: newTodo, done: false };
+      this.props.addTodo(todo);
+      this.setState({ newTodo: '' });
     }
-    this.props.addTodo(todo);
-    this.setState({ newTodo: '' });
   }
 
   render() {

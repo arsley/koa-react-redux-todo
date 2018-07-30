@@ -1,6 +1,6 @@
 /*global fetch Headers */
 import { call, put, takeLatest, takeEvery } from 'redux-saga/effects';
-import { ADD_TODO, DELETE_TODO, TOGGLE_TODO, loadedTodos, addTodoSuccess, todosFailure, deleteTodo, FETCH_TODOS } from '../actions/todos';
+import { ADD_TODO, DELETE_TODO, TOGGLE_TODO, loadedTodos, addTodoSuccess, todosFailure, FETCH_TODOS } from '../actions/todos';
 
 function* getAllTodos() {
   try {
