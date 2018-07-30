@@ -32,6 +32,7 @@ app.use(respond())
 require('./routes')(router)
 app.use(router.routes())
 app.use(router.allowedMethods())
+app.use(require('koa-static')('./build'))
 
 // mlab connection
 mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds259351.mlab.com:59351/temporary`)
